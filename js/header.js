@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const headerHTML = `
     <header>
       <div class="logo">
-        <a href="index.html"><img src="path_to_logo.png" alt="Train5D Logo"></a>
+        <a href="index.html"><img src="assets/logos/train5d-logo.png" alt="Train5D Logo"></a>
       </div>
       <nav>
         <ul>

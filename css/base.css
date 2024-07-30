@@ -11,51 +11,132 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #f8f9fa;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-.logo img {
+header .logo img {
   height: 50px;
 }
-
-nav ul {
+header nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   gap: 20px;
 }
-
-nav ul li {
+header nav ul li {
   display: inline;
 }
-
-nav ul li a {
+header nav ul li a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
 }
-
-nav ul li a:hover {
+header nav ul li a:hover {
   color: #555;
 }
-
-nav ul li a.button {
+header nav ul li a.button {
   background-color: #333;
   color: #fff;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 1em;
 }
-
-nav ul li a.button:hover {
+header nav ul li a.button:hover {
   background-color: #555;
 }
 
 footer {
-  text-align: center;
   padding: 20px;
-  background-color: #f8f9fa;
-  margin-top: 20px;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+}
+footer .footer-left {
+  display: flex;
+  align-items: center;
+}
+footer .footer-left .logo {
+  margin-right: 10px;
+}
+footer .footer-right {
+  display: flex;
+  align-items: center;
+}
+footer .footer-right .payment-icons {
+  display: flex;
+  align-items: center;
+}
+footer .footer-right .payment-icons img {
+  margin-left: 10px;
+  width: 32px;
+  height: auto;
+}
+footer a {
+  text-decoration: none;
+  color: #555;
+}
+footer a:hover {
+  color: #555;
+}
+
+@media (max-width: 320px) {
+  header,
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media (max-width: 480px) {
+  header,
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media (max-width: 768px) {
+  header,
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media (max-width: 1024px) {
+  header,
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  header,
+  footer {
+    flex-direction: row;
+    align-items: center;
+  }
+  nav ul {
+    flex-direction: row;
+    gap: 20px;
+  }
 }
 
 /*# sourceMappingURL=base.css.map */

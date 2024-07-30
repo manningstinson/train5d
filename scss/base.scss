@@ -1,7 +1,7 @@
-// base.scss
-
+// Import your variables
 @import "variables";
 
+// Global styles
 body {
   font-family: $font-stack;
   background-color: $background-color;
@@ -10,54 +10,166 @@ body {
   padding: 0;
 }
 
+// Header styles
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #f8f9fa;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .logo img {
+    height: 50px;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+
+    li {
+      display: inline;
+
+      a {
+        text-decoration: none;
+        color: $link-color;
+        font-weight: bold;
+
+        &:hover {
+          color: $link-hover-color;
+        }
+
+        &.button {
+          background-color: $button-background-color;
+          color: #fff;
+          padding: 10px 20px;
+          border-radius: 1em;
+
+          &:hover {
+            background-color: $button-hover-color;
+          }
+        }
+      }
+    }
+  }
 }
 
-.logo img {
-  height: 50px;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 20px;
-}
-
-nav ul li {
-  display: inline;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: $link-color;
-  font-weight: bold;
-}
-
-nav ul li a:hover {
-  color: $link-hover-color;
-}
-
-nav ul li a.button {
-  background-color: $button-background-color;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-}
-
-nav ul li a.button:hover {
-  background-color: $button-hover-color;
-}
-
+// Footer styles
 footer {
-  text-align: center;
   padding: 20px;
-  background-color: #f8f9fa;
-  margin-top: 20px;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: $text-color;
+
+  .footer-left {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      margin-right: 10px;
+    }
+  }
+
+  .footer-right {
+    display: flex;
+    align-items: center;
+
+    .payment-icons {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-left: 10px;
+        width: 32px;
+        height: auto;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $text-color;
+
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
+}
+
+// Responsive Breakpoints
+@media (max-width: 320px) {
+  // Small mobile devices
+  header,
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  // Large mobile devices
+  header,
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  // Tablets
+  header,
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  // Small desktops and laptops
+  header,
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  // Large desktops
+  header,
+  footer {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 20px;
+  }
 }

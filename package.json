@@ -1,0 +1,13 @@
+{
+  "name": "train5d",
+  "version": "1.0.0",
+  "description": "Your project description here",
+  "main": "index.js",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.77.8"
+  },
+  "scripts": {
+    "sass": "sass --watch scss:css"
+  }
+}

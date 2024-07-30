@@ -1,0 +1,63 @@
+// base.scss
+
+@import "variables";
+
+body {
+  font-family: $font-stack;
+  background-color: $background-color;
+  color: $primary-color;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: $link-color;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: $link-hover-color;
+}
+
+nav ul li a.button {
+  background-color: $button-background-color;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+nav ul li a.button:hover {
+  background-color: $button-hover-color;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  margin-top: 20px;
+}

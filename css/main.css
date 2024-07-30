@@ -1,5 +1,9 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
+  background-color: #eef1f7;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -32,6 +36,10 @@ nav ul li a {
   font-weight: bold;
 }
 
+nav ul li a:hover {
+  color: #555;
+}
+
 nav ul li a.button {
   background-color: #333;
   color: #fff;
@@ -42,3 +50,12 @@ nav ul li a.button {
 nav ul li a.button:hover {
   background-color: #555;
 }
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=main.css.map */

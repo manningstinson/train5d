@@ -8,10 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="training.html">Training</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="shop.html">Shop</a></li>
-          <li><a href="schedule.html" class="button">Schedule Consult</a></li>
+          <li><a href="profile.html">My Profile</a></li>
+          <li><a href="workout-planner.html">Workout Planner</a></li>
+          <li><a href="login.html" class="button">Login</a></li>
         </ul>
       </nav>
     </header>

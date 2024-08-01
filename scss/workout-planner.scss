@@ -1,25 +1,125 @@
 .form-container {
-  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form {
+  background-color: transparent;
+  padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 0px rgba(0, 0, 0, 0.1); */
+  width: 80%;
+  border: 1px solid #d6dbdd;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 label {
-  display: block;
   margin-bottom: 8px;
   font-weight: bold;
 }
 
 .form-field {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  padding: $padding;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: $background-color;
+  color: $text-color;
+  font-size: $font-size;
+  font-family: $font-family;
+  line-height: $line-height;
+  padding-right: 30px;
+  background-image: $dropdown-icon;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-variant-east-asian: normal;
+  font-variant-alternates: normal;
+  font-variant-position: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-optical-sizing: auto;
+  font-size-adjust: none;
+  font-kerning: auto;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-align: start;
+  -webkit-rtl-ordering: logical;
+  cursor: default;
+  white-space: nowrap;
 }
 
 .form-field:focus {
-  border-color: #007bff;
+  border-color: $focus-border-color;
   outline: none;
+}
+
+.form-field option {
+  color: $text-color;
+  background-color: $background-color;
+  padding: $padding / 2;
+  font-weight: normal;
+  display: block;
+  padding-block-start: 0px;
+  padding-block-end: 1px;
+  min-block-size: 1.2em;
+  padding-inline: 2px;
+  white-space: nowrap;
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+/* Additional styles to ensure dropdown background matches */
+.form-field::-ms-expand {
+  display: none; /* Remove default dropdown arrow in IE */
+}
+
+.form-field:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 $text-color;
+}
+
+.form-field::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+  background-image: $dropdown-icon;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+  transform: translateY(-50%);
+  z-index: 1;
 }

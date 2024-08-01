@@ -1,6 +1,6 @@
 body {
   font-family: "Arial", sans-serif;
-  background-color: #fafafa;
+  background-color: #f1f5f7;
   color: #333;
   margin: 0;
   padding: 0;
@@ -52,7 +52,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   font-size: 14px;
-  color: #555;
+  color: #333;
 }
 footer .footer-left {
   display: flex;
@@ -76,7 +76,7 @@ footer .footer-right .payment-icons img {
 }
 footer a {
   text-decoration: none;
-  color: #555;
+  color: #333;
 }
 footer a:hover {
   color: #555;

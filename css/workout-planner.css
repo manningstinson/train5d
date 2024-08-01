@@ -1,27 +1,17 @@
-.form-container {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+/* Error: Undefined variable.
+ *    ,
+ * 38 |   padding: $padding;
+ *    |            ^^^^^^^^
+ *    '
+ *   scss/workout-planner.scss 38:12  root stylesheet */
 
-label {
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
   display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 38 \2502    padding: $padding;\a    \2502             ^^^^^^^^\a    \2575 \a   scss/workout-planner.scss 38:12  root stylesheet";
 }
-
-.form-field {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-.form-field:focus {
-  border-color: #007bff;
-  outline: none;
-}
-
-/*# sourceMappingURL=workout-planner.css.map */

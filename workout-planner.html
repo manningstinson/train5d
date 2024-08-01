@@ -9,30 +9,38 @@
   <body>
     <div class="form-container">
       <form id="workoutForm">
-        <label for="trainingLocation">Where will you be training?</label>
-        <select
-          id="trainingLocation"
-          class="form-field"
-          onchange="updateForm()"
-        >
-          <option value="pool">Pool</option>
-          <option value="gym">Gym</option>
-          <option value="dryland">Dry Land</option>
-        </select>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="trainingLocation">Training Environment</label>
+            <select
+              id="trainingLocation"
+              class="form-field"
+              onchange="updateForm()"
+            >
+              <option value="pool">Pool</option>
+              <option value="gym">Gym</option>
+              <option value="dryland">Dry Land</option>
+            </select>
+          </div>
 
-        <label for="difficultyLevel">Choose your difficulty level:</label>
-        <select id="difficultyLevel" class="form-field">
-          <option value="beginner">Beginner</option>
-          <option value="intermediate">Intermediate</option>
-          <option value="advanced">Advanced</option>
-        </select>
+          <div class="form-group">
+            <label for="difficultyLevel">Choose your difficulty level:</label>
+            <select id="difficultyLevel" class="form-field">
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="advanced">Advanced</option>
+            </select>
+          </div>
 
-        <label for="workoutType">Select the type of workout:</label>
-        <select id="workoutType" class="form-field">
-          <option value="flexibility">Flexibility</option>
-          <option value="strength">Strength</option>
-          <option value="cardio">Cardio</option>
-        </select>
+          <div class="form-group">
+            <label for="workoutType">Select the type of workout:</label>
+            <select id="workoutType" class="form-field">
+              <option value="flexibility">Flexibility</option>
+              <option value="strength">Strength</option>
+              <option value="cardio">Cardio</option>
+            </select>
+          </div>
+        </div>
       </form>
     </div>
 

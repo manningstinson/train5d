@@ -1,6 +1,6 @@
 body {
   font-family: "Arial", sans-serif;
-  background-color: #eef1f7;
+  background-color: #fafafa;
   color: #333;
   margin: 0;
   padding: 0;
@@ -137,6 +137,31 @@ footer a:hover {
     flex-direction: row;
     gap: 20px;
   }
+}
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.form-field:focus {
+  border-color: #007bff;
+  outline: none;
 }
 
 /*# sourceMappingURL=main.css.map */

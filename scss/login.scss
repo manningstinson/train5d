@@ -1,0 +1,266 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: $font-stack;
+
+  .container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Ensure no overflow within container */
+  }
+
+  .login-container-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%; /* Ensure it takes up half the width */
+    box-sizing: border-box;
+    overflow: hidden; /* Ensure no overflow within wrapper */
+    order: 2; /* Ensure login is on the right */
+    background-color: #feffff;
+  }
+
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    box-sizing: border-box;
+    overflow: hidden; /* Ensure no overflow within login container */
+    max-width: 500px; /* Increased max width for wider form fields */
+    width: 100%; /* Ensure it takes full width */
+  }
+
+  .form-container {
+    width: 100%;
+    max-width: 400px; /* Adjusted max width for form container */
+  }
+
+  .carousel-content svg {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 20px;
+  }
+
+  .carousel-content img {
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .carousel-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden; /* Ensure no overflow within carousel container */
+    order: 1; /* Ensure carousel is on the left */
+  }
+
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    box-sizing: border-box;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .carousel-item.active {
+    display: flex;
+    opacity: 1;
+    z-index: 2;
+  }
+
+  .carousel-content {
+    text-align: center;
+    max-width: 400px;
+  }
+
+  .carousel-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .carousel-content h2 {
+    color: $primary-color;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .carousel-content p {
+    color: $text-color;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .carousel-content .btn {
+    background-color: $button-background-color;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+  .indicator.active {
+    background-color: $button-background-color;
+  }
+
+  .logo {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    color: $primary-color;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-family: $font-stack;
+  }
+
+  .social-login {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .btn-social {
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px; // Rounded corners
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    background-color: #f1f5f7;
+    color: $primary-color;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 15px; /* Increased padding for wider form fields */
+    margin: 10px 0; /* Increased margin for spacing */
+    border: 1px solid $border-color;
+    border-radius: 5px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 15px; /* Increased padding for wider button */
+    background-color: #46465a;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+
+  .extra-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .forgot-password,
+  .signup {
+    color: $link-color;
+    text-decoration: none;
+    font-family: $font-stack;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column-reverse;
+      height: auto;
+    }
+
+    .carousel-container {
+      display: none; /* Hide carousel on mobile */
+    }
+
+    .login-container-wrapper {
+      width: 100%;
+      height: 100vh;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-container {
+      max-width: 100%; /* Ensure full width on mobile */
+    }
+
+    .form-container {
+      max-width: 100%; /* Ensure full width on mobile */
+    }
+  }
+}

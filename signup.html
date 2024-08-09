@@ -9,6 +9,25 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <script>
+      function init() {
+        gapi.load("auth2", function () {
+          gapi.auth2
+            .init({
+              client_id:
+                "482824739572-mr45ubm3oghdit3jboigvj87fssco3kh.apps.googleusercontent.com",
+            })
+            .then(
+              function () {
+                console.log("Google Auth initialized");
+              },
+              function (error) {
+                console.error("Error initializing Google Auth:", error);
+              }
+            );
+        });
+      }
+    </script>
   </head>
   <body>
     <div class="canvas-page">
@@ -85,7 +104,6 @@
     </div>
     <script
       src="https://apis.google.com/js/platform.js?onload=init"
-      async
       defer
     ></script>
     <script src="js/google-login.js" defer></script>

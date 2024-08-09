@@ -73,6 +73,11 @@ form {
   margin-right: 10px;
 }
 
+.form-group label[for=show-password] {
+  color: #464659;
+  font-family: "Open Sans", sans-serif; /* Optional: To keep font consistent */
+}
+
 .btn {
   width: 100%;
   padding: 15px;

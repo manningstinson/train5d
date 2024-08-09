@@ -75,6 +75,11 @@ form {
   margin-right: 10px;
 }
 
+.form-group label[for="show-password"] {
+  color: #464659;
+  font-family: $font-stack; /* Optional: To keep font consistent */
+}
+
 .btn {
   width: 100%;
   padding: 15px;

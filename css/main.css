@@ -36,13 +36,13 @@ header nav ul li a:hover {
   color: #464659;
 }
 header nav ul li a.button {
-  background-color: #333;
+  background-color: #464659;
   color: #fff;
   padding: 10px 20px;
   border-radius: 1em;
 }
 header nav ul li a.button:hover {
-  background-color: #555;
+  background-color: #464659;
 }
 
 footer {
@@ -259,7 +259,7 @@ body {
   margin-bottom: 20px;
 }
 .login-page .carousel-content .btn {
-  background-color: #333;
+  background-color: #464659;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -282,7 +282,7 @@ body {
   cursor: pointer;
 }
 .login-page .indicator.active {
-  background-color: #333;
+  background-color: #464659;
 }
 .login-page .logo {
   width: 100px;

@@ -1,6 +1,13 @@
 function handleCredentialResponse(response) {
   console.log("Encoded JWT ID token: " + response.credential);
-  // You can decode the JWT to access user information
+
+  // Here you could decode the JWT token if you need to access user information
+  // Example:
+  // const userInfo = jwt_decode(response.credential);
+  // console.log(userInfo);
+
+  // Redirect to the profile page
+  window.location.href = "profile.html";
 }
 
 window.onload = function () {

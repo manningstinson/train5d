@@ -16,7 +16,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 0vh;
+  height: 100vh;
   overflow: hidden;
   font-family: "Open Sans", sans-serif;
 }
@@ -217,7 +217,7 @@ body {
   }
   .login-page .login-container-wrapper {
     width: 100%;
-    height: 0vh;
+    height: 20vh;
     padding: 20px;
     display: flex;
     justify-content: center;

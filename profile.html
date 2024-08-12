@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Train5D | Wellness Coaching for Beginners</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+    <!-- Include CryptoJS for Gravatar support -->
+    <script src="https://crypto-js.googlecode.com/svn/tags/3.1.2/rollups/md5.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="main-container">
+        <!-- Profile Image Section -->
+        <div class="profile-section">
+          <img
+            src="default-avatar.png"
+            <!--
+            Ensure
+            this
+            path
+            is
+            correct
+            and
+            the
+            image
+            exists
+            --
+          />
+          alt="Profile Image" id="profileImage" class="clickable" />
+        </div>
+
+        <!-- Profile Form Section -->
+        <div class="profile-form">
+          <h2>Profile Details</h2>
+
+          <label for="firstName">First Name</label>
+          <input
+            type="text"
+            id="firstName"
+            placeholder="Enter your first name"
+          />
+
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" placeholder="Enter your last name" />
+
+          <label for="displayName">Display Name</label>
+          <input
+            type="text"
+            id="displayName"
+            placeholder="Enter your display name"
+          />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email address"
+          />
+
+          <label for="nutritionLink">Nutrition (Healthie)</label>
+          <input
+            type="url"
+            id="nutritionLink"
+            placeholder="Enter your Healthie link"
+          />
+
+          <label for="trainingLink">Training & Workouts (QuickCoach)</label>
+          <input
+            type="url"
+            id="trainingLink"
+            placeholder="Enter your QuickCoach link"
+          />
+
+          <div class="form-actions">
+            <button type="submit" id="updateProfileBtn">Update Profile</button>
+            <button type="button" class="cancel" id="cancelBtn">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal for Image Upload (Optional) -->
+      <div id="avatarModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Update Avatar</h2>
+          <input type="file" id="modalFileUpload" />
+        </div>
+      </div>
+    </main>
+
+    <script src="js/header.js"></script>
+    <script src="js/avatar.js"></script>
+  </body>
+</html>

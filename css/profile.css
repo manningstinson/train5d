@@ -32,6 +32,7 @@ main {
   height: 150px;
   object-fit: cover;
   margin-bottom: 1rem;
+  cursor: pointer; /* Indicates the image is clickable */
 }
 
 .profile-form {
@@ -84,6 +85,7 @@ main {
 .profile-form .form-actions {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap; /* Wrap the buttons on smaller screens */
 }
 
 .profile-form button {
@@ -95,6 +97,9 @@ main {
   padding: 0.75rem 1.5rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  min-width: 44px;
+  min-height: 44px;
+  margin: 0.5rem 0; /* Adds space between buttons */
 }
 
 .profile-form button:hover {
@@ -145,11 +150,6 @@ main {
 .close:focus {
   color: black;
   text-decoration: none;
-  cursor: pointer;
-}
-
-/* Make the avatar image clickable */
-.clickable {
   cursor: pointer;
 }
 

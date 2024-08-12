@@ -1,3 +1,4 @@
+/* Base styles */
 main {
   display: flex;
   justify-content: center;
@@ -150,6 +151,63 @@ main {
 /* Make the avatar image clickable */
 .clickable {
   cursor: pointer;
+}
+
+/* Responsive Styles */
+/* Tablet Devices */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .profile-section {
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  .profile-form {
+    padding-left: 0;
+  }
+  .profile-form h2 {
+    font-size: 1.5rem;
+  }
+  .profile-form button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .profile-form .form-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+/* Mobile Devices */
+@media (max-width: 480px) {
+  .main-container {
+    padding: 1rem;
+  }
+  .profile-section img {
+    width: 100px;
+    height: 100px;
+  }
+  .profile-form h2 {
+    font-size: 1.25rem;
+  }
+  .profile-form label {
+    font-size: 0.875rem;
+  }
+  .profile-form input[type=text],
+  .profile-form input[type=email],
+  .profile-form input[type=password],
+  .profile-form input[type=url] {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+  .profile-form button {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
 }
 
 /*# sourceMappingURL=profile.css.map */

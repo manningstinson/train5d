@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <li><a href="index.html">Home</a></li>
           <li><a href="profile.html">My Profile</a></li>
           <li><a href="workout-planner.html">Workout Planner</a></li>
-          <li><a href="login.html" class="button">Login</a></li>
+          <li><a href="login.html" class="button">Login/Signup</a></li>
         </ul>
       </nav>
     </header>

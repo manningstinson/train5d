@@ -19,37 +19,66 @@ header {
   background-color: #fff;
   padding: 5px 100px 5px 100px;
 
-  .logo img {
-    height: 50px;
+  .logo {
+    img {
+      height: 50px;
+    }
   }
 
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  nav {
+    position: relative;
     display: flex;
-    gap: 20px;
+    align-items: center;
 
-    li {
-      display: inline;
+    .hamburger-menu {
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      width: 20px;
+      height: 40px;
+      margin-right: 10px;
 
-      a {
-        text-decoration: none;
-        color: $link-color;
-        font-weight: bold;
+      &::before,
+      &::after,
+      span {
+        content: "";
+        display: block;
+        height: 3px;
+        background-color: #464659; // Set the color of the bars to #464659
+        margin: 4px 0;
+        transition: 0.3s ease;
+      }
+    }
 
-        &:hover {
-          color: $link-hover-color;
-        }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
 
-        &.button {
-          background-color: $button-background-color;
-          color: #fff;
-          padding: 10px 20px;
-          border-radius: 1em;
+      li {
+        display: inline;
+
+        a {
+          text-decoration: none;
+          color: $link-color;
+          font-weight: bold;
 
           &:hover {
-            background-color: $button-hover-color;
+            color: $link-hover-color;
+          }
+
+          &.button {
+            background-color: $button-background-color;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 1em;
+
+            &:hover {
+              background-color: $button-hover-color;
+            }
           }
         }
       }
@@ -103,73 +132,69 @@ footer {
 }
 
 // Responsive Breakpoints
-@media (max-width: 320px) {
-  // Small mobile devices
-  header,
-  footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  // Large mobile devices
-  header,
-  footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
-@media (max-width: 768px) {
-  // Tablets
-  header,
-  footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
-@media (max-width: 1024px) {
-  // Small desktops and laptops
-  header,
-  footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav ul {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-}
-
-@media (min-width: 1200px) {
-  // Large desktops
-  header,
-  footer {
+@media (max-width: 1147px) {
+  header {
+    padding: 10px;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
   }
 
-  nav ul {
-    flex-direction: row;
+  nav {
+    .hamburger-menu {
+      display: block; // Show the hamburger menu on screens up to 1147px
+    }
+
+    .nav-links {
+      display: none; // Hide the nav links by default on screens up to 1147px
+      flex-direction: column;
+      background-color: #fff;
+      position: fixed; // Make the dropdown cover the full screen
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; // Cover the full height
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: none; // Remove the box shadow
+    }
+
+    .nav-links.show {
+      display: flex; // Show the nav links when the menu is toggled
+    }
+
+    ul {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav ul li {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    nav ul li a {
+      font-size: 24px;
+      padding: 20px;
+      width: 100%;
+      display: block;
+    }
+
+    nav ul li a.button {
+      margin: 20px auto;
+    }
+  }
+}
+
+@media (min-width: 1148px) {
+  .hamburger-menu {
+    display: none; // Hide the hamburger menu on larger screens
+  }
+
+  .nav-links {
+    display: flex; // Always show the nav links on larger screens
     gap: 20px;
   }
 }

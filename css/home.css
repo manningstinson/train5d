@@ -1,0 +1,107 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #eef2f7;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #eef2f7;
+}
+
+.hero-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.hero-section h1 {
+  font-size: 2.5em;
+  color: #464659;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 1.2em;
+  color: #464659;
+  margin-bottom: 20px;
+}
+
+.email-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.email-form input[type=email] {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  width: 70%;
+}
+
+.email-form button {
+  padding: 10px;
+  font-size: 1em;
+  background-color: #464659;
+  color: #fff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.email-form button:hover {
+  background-color: #444;
+}
+
+.opt-out {
+  font-size: 0.9em;
+  color: #777;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2em;
+  }
+  .hero-section p {
+    font-size: 1em;
+  }
+  .email-form input[type=email] {
+    width: 60%;
+  }
+}
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 1.5em;
+  }
+  .hero-section p {
+    font-size: 0.9em;
+  }
+  .email-form {
+    flex-direction: column;
+  }
+  .email-form input[type=email] {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  .email-form button {
+    border-radius: 5px;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */

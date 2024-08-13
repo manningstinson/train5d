@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Load Google avatar first, fallback to Gravatar if necessary
   loadGoogleAvatar();
 
-  // Open the modal when the avatar is clicked (if you still want to use the modal)
+  // Open the modal when the avatar is clicked
   profileImage.addEventListener("click", function () {
     const modal = document.getElementById("avatarModal");
     modal.style.display = "block";
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Handle file selection and preview the image (optional if using modal)
+  // Handle file selection and preview the image
   const modalFileUpload = document.getElementById("modalFileUpload");
   modalFileUpload.addEventListener("change", function () {
     const file = this.files[0];
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Set the profile image source to the selected file
         profileImage.src = e.target.result;
 
-        // If you still want to send the image to the server:
+        // If you want to send the image to the server:
         const formData = new FormData();
         formData.append("avatar", file);
 
